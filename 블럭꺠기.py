@@ -1,0 +1,1 @@
+C:/Python310/python.exe "c:\work\블럭깨기게임.py"
