@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹 개발 학습 페이지</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 헤더 -->
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">📚 웹 개발 학습</div>
+                <ul class="nav-menu">
+                    <li><a href="#home" class="nav-link">홈</a></li>
+                    <li><a href="#html" class="nav-link">HTML</a></li>
+                    <li><a href="#css" class="nav-link">CSS</a></li>
+                    <li><a href="#javascript" class="nav-link">JavaScript</a></li>
+                    <li><a href="#practice" class="nav-link">실습</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- 메인 콘텐츠 -->
+    <main>
+        <!-- 홈 섹션 -->
+        <section id="home" class="section hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>웹 개발 학습에 오신 것을 환영합니다!</h1>
+                    <p>HTML5, CSS3, JavaScript의 기초를 함께 배워봅시다</p>
+                    <button class="btn btn-primary" onclick="scrollToSection('html')">시작하기</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- HTML 섹션 -->
+        <section id="html" class="section">
+            <div class="container">
+                <h2>📄 HTML5란?</h2>
+                <div class="content-grid">
+                    <div class="card">
+                        <h3>구조</h3>
+                        <p>HTML은 웹 페이지의 구조를 정의합니다. 시맨틱 태그를 사용하여 의미있는 마크업을 작성합니다.</p>
+                        <code>&lt;header&gt;, &lt;nav&gt;, &lt;section&gt;, &lt;article&gt;, &lt;footer&gt;</code>
+                    </div>
+                    <div class="card">
+                        <h3>요소</h3>
+                        <p>텍스트, 이미지, 링크, 폼 등 다양한 요소들을 포함할 수 있습니다.</p>
+                        <code>&lt;h1&gt;~&lt;h6&gt;, &lt;p&gt;, &lt;img&gt;, &lt;a&gt;, &lt;form&gt;</code>
+                    </div>
+                    <div class="card">
+                        <h3>의미</h3>
+                        <p>각 태그는 특정한 의미를 가지고 있어 검색 엔진과 스크린 리더에 도움이 됩니다.</p>
+                        <code>SEO, 접근성 향상</code>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CSS 섹션 -->
+        <section id="css" class="section">
+            <div class="container">
+                <h2>🎨 CSS3란?</h2>
+                <div class="content-grid">
+                    <div class="card">
+                        <h3>스타일</h3>
+                        <p>색상, 폰트, 레이아웃 등을 제어합니다.</p>
+                        <code>color, font-size, background-color</code>
+                    </div>
+                    <div class="card">
+                        <h3>레이아웃</h3>
+                        <p>Flexbox와 Grid를 사용한 현대적 레이아웃</p>
+                        <code>display: flex, display: grid</code>
+                    </div>
+                    <div class="card">
+                        <h3>애니메이션</h3>
+                        <p>부드러운 전환 효과와 애니메이션</p>
+                        <code>transition, @keyframes, animation</code>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- JavaScript 섹션 -->
+        <section id="javascript" class="section">
+            <div class="container">
+                <h2>⚙️ JavaScript란?</h2>
+                <div class="content-grid">
+                    <div class="card">
+                        <h3>상호작용</h3>
+                        <p>사용자와의 상호작용을 처리합니다.</p>
+                        <code>event listeners, DOM manipulation</code>
+                    </div>
+                    <div class="card">
+                        <h3>동적 콘텐츠</h3>
+                        <p>런타임에 동적으로 콘텐츠를 생성합니다.</p>
+                        <code>createElement, appendChild, innerHTML</code>
+                    </div>
+                    <div class="card">
+                        <h3>데이터 처리</h3>
+                        <p>배열, 객체, 함수 등을 사용하여 데이터 처리</p>
+                        <code>array methods, objects, async/await</code>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 실습 섹션 -->
+        <section id="practice" class="section practice-section">
+            <div class="container">
+                <h2>💻 실습 코너</h2>
+                
+                <!-- 계산기 -->
+                <div class="practice-box">
+                    <h3>간단한 계산기</h3>
+                    <div class="calculator">
+                        <input type="number" id="num1" placeholder="첫 번째 숫자">
+                        <select id="operator">
+                            <option value="+">더하기(+)</option>
+                            <option value="-">빼기(-)</option>
+                            <option value="*">곱하기(×)</option>
+                            <option value="/">나누기(÷)</option>
+                        </select>
+                        <input type="number" id="num2" placeholder="두 번째 숫자">
+                        <button class="btn btn-calculate" onclick="calculate()">계산</button>
+                        <div id="result" class="result-box"></div>
+                    </div>
+                </div>
+
+                <!-- 색상 변환기 -->
+                <div class="practice-box">
+                    <h3>배경색 변경</h3>
+                    <div class="color-changer">
+                        <input type="color" id="colorPicker" value="#3498db">
+                        <button class="btn btn-secondary" onclick="changeBackgroundColor()">적용</button>
+                        <button class="btn btn-secondary" onclick="randomColor()">랜덤</button>
+                    </div>
+                    <p id="colorCode" class="color-code">현재 색상: #3498db</p>
+                </div>
+
+                <!-- 투두 리스트 -->
+                <div class="practice-box">
+                    <h3>간단한 투두 리스트</h3>
+                    <div class="todo-list">
+                        <input type="text" id="todoInput" placeholder="할 일을 입력하세요">
+                        <button class="btn btn-secondary" onclick="addTodo()">추가</button>
+                        <ul id="todoItems" class="todo-items">
+                            <li class="todo-item">
+                                <span>HTML 학습하기</span>
+                                <button onclick="removeTodo(this)">×</button>
+                            </li>
+                            <li class="todo-item">
+                                <span>CSS 마스터하기</span>
+                                <button onclick="removeTodo(this)">×</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 텍스트 통계 -->
+                <div class="practice-box">
+                    <h3>텍스트 통계</h3>
+                    <div class="text-stats">
+                        <textarea id="textArea" placeholder="텍스트를 입력하세요" rows="6"></textarea>
+                        <button class="btn btn-secondary" onclick="analyzeText()">분석</button>
+                        <div id="statsResult" class="stats-result"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 푸터 -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 웹 개발 학습 페이지 | HTML5 · CSS3 · JavaScript</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
