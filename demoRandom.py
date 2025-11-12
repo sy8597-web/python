@@ -24,5 +24,16 @@ if exists(fileName):
     print("파일 크기:", os.path.getsize(fileName))
 else:
     print("파일이 존재하지 않습니다.")  
-    
+
+# 운영체제정보
+print(os.name)
+print(os.environ)
+# print(os.system('notedpad.exe'))   
+print (os.getcwd())
+
+import glob
+# print(glob.glob("c:\\work\\*.py"))
+#raw String
+print(glob.glob(r"c:\work\*.py"))
+
 

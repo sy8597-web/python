@@ -1,0 +1,1 @@
+c:\Users\student\Desktop\수업자료\Demo\07장파일리스트처리\pandas-ai-main.zip c:\Users\student\Desktop\수업자료\Demo\07장파일리스트처리\demo.csv c:\Users\student\Desktop\수업자료\Demo\07장파일리스트처리\demo.pdf c:\Users\student\Desktop\수업자료\Demo\07장파일리스트처리\demo.xlsx
