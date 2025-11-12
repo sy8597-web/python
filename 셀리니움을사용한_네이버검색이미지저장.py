@@ -18,7 +18,7 @@ input_name = input("검색할 동물이름:")
 driver = wb.Chrome()
 driver.get(f"https://search.naver.com/search.naver?where=image&sm=tab_jum&query={input_name}")
 #약간의 대기 시간 주기 
-time.sleep(2) 
+time.sleep(2)  
 for i in range(2) : 
     driver.find_element(By.CSS_SELECTOR, "body").send_keys(Keys.END)
     time.sleep(2) 
